@@ -1,62 +1,34 @@
-const firstName = 'Justin';
-const lastName = 'Perez';
-const age = 28
-const str = 'Hello there my name is Justin';
-const tags = 'web design,web development,programming';
+const name = 'Justin';
+const age = 28;
+const job = 'Software Engineer';
+const city = 'Atlanta';
 
-let val;
+// Without template strings (es5)
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job 
++ '</li><li>City: ' + city + '</li></ul>';
 
-val = firstName + lastName;
+html = '<ul>' +
+        '<li>Name: ' + name + '</li>' +
+        '<li>Age: ' + age + '</li>' +
+        '<li>Job: ' + job + '</li>' +
+        '<li>City: ' + city + '</li>' +
+        '</ul>';
 
-// Concatenation
-val = firstName + ' ' + lastName;
+function hello(){
+    return 'hello';
+}
 
-// Append
-val = 'Brad ';
-val += 'Traversy';
+// With template strings (es6)
+html = `
+    <ul>
+        <li>Name: ${name}</li>
+        <li>Age: ${age}</li>
+        <li>Job: ${job}</li>
+        <li>City: ${city}</li>
+        <li>${2 + 2}</li>
+        <li>${hello()}</li>
+        <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+    </ul>
+`;
 
-val = 'Hello, my name is ' + firstName + ' and I am ' + age + '.';
-
-// Escaping
-val = 'That\'s awesome, I can\'t wait.';
-
-// Length
-val = firstName.length;
-
-// concat
-val = firstName.concat(' ', lastName);
-
-// Change case
-val = firstName.toUpperCase();
-val = lastName.toLowerCase();
-
-val = firstName[0];
-
-// indexOf()
-val = lastName.indexOf('e');
-val = lastName.lastIndexOf('e');
-
-// charAt()
-val = lastName.charAt('2');
-// Get last char
-val = lastName.charAt(lastName.length - 1);
-
-// substring()
-val = lastName.substring(0, 4);
-
-// slice
-val = lastName.slice(0, 4);
-val = lastName.slice(-3);
-
-// split()
-val = str.split(' ');
-val = tags.split(',');
-
-// replace
-val = str.replace('Justin', 'Mr. ' + lastName);
-
-// includes()
-val = str.includes('Hello');
-val = str.includes('foo');
-
-console.log(val);
+document.body.innerHTML = html;
