@@ -1,74 +1,57 @@
-// FOR LOOP
+// WINDOWS METHODS / OBJECTS / PROPERTIES
 
-// for(let i = 0; i < 10; i++){
-//     if(i === 2) {
-//         console.log(`${i} is my favorite number`);
-//         continue;
-//     }
-    
-//     if(i === 5){
-//         console.log('Stop the loop')
-//         break;
-//     }
+// Alert
+// alert('Hello World');
 
-//     console.log('Number ' + i);
+// Prompt
+// const input = prompt();
+// alert(input);
+
+// Confirm
+// if(confirm('Are you sure?')){
+//     console.log('YES')
+// } else {
+//     console.log('NO');
 // }
 
-// WHILE LOOP
+let val;
 
-// let i = 0;
+// Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
 
-// while(i < 10){
-//     console.log('Number' + i);
-//     i++;
-// }
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
 
-// DO WHILE
+// Scroll points
+val = window.scrollY;
+val = window.scrollX;
 
-// let i = 0;
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
 
-// do{
-//     console.log('Number ' + i);
-//     i++;
-// } 
+// Redirect
+// window.location.href = 'http://google.com';
+// Reload
+// val = window.location.reload();
 
-// while(i <10);
+// History Object
 
+// window.history.go(-1);
+// val = window.history.length;
 
-// LOOP THROUGH ARRAY
-const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
 
-// for(let i = 0; i < cars.length; i++){
-//     console.log(cars[i]);
-// }
-
-
-// FOREACH
-// cars.forEach(function(car, index, array){
-//     console.log(`${index} : ${car}`);
-//     console.log(array);
-// })
-
-// MAP
-// const users = [
-//     {id: 1, name: 'Justin' },
-//     {id: 2, name: 'Sally'},
-//     {id: 3, name: 'Bill'}
-// ];
-
-// const ids = users.map(function(user){
-//     return user.id;
-// });
-
-// console.log(ids);
-
-//FOR IN LOOP
-const user = {
-    firstName: 'Justin',
-    lastName: 'Perez',
-    age: 28
-}
-
-for(let x in user){
-    console.log(`${x} : ${user[x]}`);
-}
+console.log(val);
